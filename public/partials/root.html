@@ -1,0 +1,48 @@
+<div class="container fill">
+	<div class="row fill">
+		<div class="col-md-4 fill">
+			<div class="panel panel-default fill-max">
+				<div class="panel-heading">
+					<div class="row container-fluid">
+						<h3 class="pull-left">Lista pizz</h3>
+						<a class="btn btn-primary brn-lg pull-right" href="/new" ng-click="app.setSelection()">Dodaj nową</a>
+					</div>
+				</div>			
+				<div class="panel-body panel-body-fill">
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="pizza in pizzaList" ng-mouseover="app.showPizza($index)">
+							<h4 class="list-group-item-heading pizza-name">{{ pizza.name }}</h4>
+							<div class="pizza-components">
+								<p class="list-group-item-text">
+									<span ng-repeat="component in pizza.components">{{ items.components[component].name }}{{ $last ? '' : ', ' }}</span>
+								</p>
+							</div>
+							<div class="controllers hide" mouseover-show>
+								<a ng-href="/edit/{{ $index }}" title="Edytuj" ng-click="app.setSelection(pizza.components)">
+									<span class="glyphicon glyphicon-edit"></span>
+								</a>
+								<a ng-href="/results/{{ $index }}" title="Szukaj">
+									<span class="glyphicon glyphicon-search"></span>
+								</a>
+								<a href="" title="Usuń" ng-click="app.delete($index)">
+									<span class="glyphicon glyphicon-trash"></span>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="container components">
+				<img src="img/pusta_pizza.png">
+				<div class="layer{{ $index + 1 }}" ng-repeat="category in items.categories">
+					<img class="component" 
+						ng-repeat="component in category.items" 
+						ng-show="pizzaList[app.showIndex].components.indexOf(component) > -1" 
+						ng-src="img/{{ component }}.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,236 @@
+{
+	"list": [
+		{
+			"id": 0,
+			"name": "Pizzeria Banolli",
+			"address": "Karmelicka 22 Kraków",
+			"google_map_api": "linkGoogleMapJaWrzuce",
+			"pizza": [
+				{
+					"name": "Margherita",
+					"price": "17",
+					"components": ["1_1"]
+				},
+				{
+					"name": "Funghi",
+					"price": "19",
+					"components": ["1_7"]
+				},
+				{
+					"name": "Straniero",
+					"price": "19",
+					"components": ["2_2"]
+				},
+				{
+					"name": "Salame",
+					"price": "21",
+					"components": ["2_3", "2_2"]
+				},
+				{
+					"name": "Primavera",
+					"price": "23",
+					"components": ["1_7", "2_3"]
+				},
+				{
+					"name": "Capricciosa",
+					"price": "23",
+					"components": ["1_7", "2_4", "1_6"]
+				},
+				{
+					"name": "LaBella",
+					"price": "24",
+					"components": ["3_1", "2_4", "1_6", "1_2"]
+				},
+				{
+					"name": "Vera",
+					"price": "25",
+					"components": ["2_1", "1_4", "1_5"]
+				},
+				{
+					"name": "Amore",
+					"price": "26",
+					"components": ["2_4", "2_2", "1_7", "3_3"]
+				},
+				{
+					"name": "Mexykanska",
+					"price": "28",
+					"components": ["1_3", "2_1", "2_4", "3_3", "2_3", "2_2"]
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "Pizza Dominium",
+			"address": "Pawia 5 Kraków",
+			"google_map_api": "linkGoogleMapJaWrzuce",
+			"pizza": [
+				{
+					"name": "Rustica",
+					"price": "28",
+					"components": ["3_2", "1_1", "3_1", "2_1"]
+				},
+				{
+					"name": "Pepperoni",
+					"price": "25",
+					"components": ["3_1", "2_2", "1_7"]
+				},
+				{
+					"name": "Farmerska",
+					"price": "29",
+					"components": ["2_1", "1_1", "2_2"]
+				},
+				{
+					"name": "LaBella",
+					"price": "28",
+					"components": ["1_6", "3_3", "2_4", "2_3"]
+				},
+				{
+					"name": "Plambe",
+					"price": "30",
+					"components": ["3_1", "1_7", "3_3", "2_2", "2_1"]
+				},
+				{
+					"name": "Corrida",
+					"price": "31",
+					"components": ["2_3", "1_2", "1_4", "3_3"]
+				},
+				{
+					"name": "HotChili",
+					"price": "28",
+					"components": ["1_6", "2_2"]
+				},
+				{
+					"name": "Dominium",
+					"price": "32",
+					"components": ["2_2", "1_6", "3_2", "1_7"]
+				},
+				{
+					"name": "Carra",
+					"price": "25",
+					"components": ["3_1", "2_2", "1_2", "3_3"]
+				},
+				{
+					"name": "Omnornia",
+					"price": "29",
+					"components": ["1_3", "2_1", "1_4", "1_5", "2_4"]
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "DeGrasso",
+			"address": "Starowiślna 32 Kraków",
+			"google_map_api": "linkGoogleMapJaWrzuce",
+			"pizza": [
+				{
+					"name": "Califfo",
+					"price": "28",
+					"components": ["2_4", "1_6", "3_3"]
+				},
+				{
+					"name": "Calzone",
+					"price": "29",
+					"components": ["2_4", "2_3", "2_2"]
+				},
+				{
+					"name": "Decoro",
+					"price": "26",
+					"components": ["2_4", "1_7", "1_6", "1_5", "3_3"]
+				},
+				{
+					"name": "Piacere",
+					"price": "26",
+					"components": ["2_3", "1_2", "1_4"]
+				},
+				{
+					"name": "Semplicita",
+					"price": "21",
+					"components": ["2_4", "1_6"]
+				},
+				{
+					"name": "Sparare",
+					"price": "27",
+					"components": ["1_1", "2_3", "1_5", "3_3"]
+				},
+				{
+					"name": "DeGrasso",
+					"price": "25",
+					"components": ["3_2", "2_3", "3_3"]
+				},
+				{
+					"name": "Completo",
+					"price": "30",
+					"components": ["1_5", "1_1", "1_4"]
+				},
+				{
+					"name": "Napoletana",
+					"price": "25",
+					"components": ["2_3", "3_3", "1_6", "3_2"]
+				},
+				{
+					"name": "PepeRoso",
+					"price": "23",
+					"components": ["2_3", "3_1", "2_2", "1_3", "1_7"]
+				}
+			]
+		},
+		{
+			"id": 3,
+			"name": "CapriNew",
+			"address": "Chopina 33 Kraków",
+			"google_map_api": "linkGoogleMapJaWrzuce",
+			"pizza": [
+				{
+					"name": "Rustica",
+					"price": "25",
+					"components": ["2_1", "3_2"]
+				},
+				{
+					"name": "Pescatore",
+					"price": "26",
+					"components": ["1_1", "1_4", "2_4"]
+				},
+				{
+					"name": "Wiejska",
+					"price": "32",
+					"components": ["1_5", "1_1", "2_2"]
+				},
+				{
+					"name": "CapriFirmowa",
+					"price": "29",
+					"components": ["1_7", "1_6", "2_4"]
+				},
+				{
+					"name": "Wegetariana",
+					"price": "32",
+					"components": ["1_7", "1_6", "1_4", "1_3", "1_5", "1_2", "3_3"]
+				},
+				{
+					"name": "Neapolitana",
+					"price": "35",
+					"components": ["2_3", "2_4", "2_2", "1_6", "3_3"]
+				},
+				{
+					"name": "Dipollo",
+					"price": "34",
+					"components": ["2_1", "1_6", "1_4"]
+				},
+				{
+					"name": "Goralska",
+					"price": "36",
+					"components": ["3_1", "2_2", "1_1", "2_3"]
+				},
+				{
+					"name": "Chicago",
+					"price": "35",
+					"components": ["1_4", "2_1", "1_6"]
+				},
+				{
+					"name": "Pinokio",
+					"price": "35",
+					"components": ["2_3", "2_4", "2_1", "3_2"]
+				}
+			]
+		}
+	]
+}

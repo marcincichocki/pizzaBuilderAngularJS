@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<div class="alert alert-info">
+			<strong>{{ pizzaList[index].name }}: </strong>
+			<span ng-repeat="component in pizzaList[index].components">{{ items.components[component].name }}{{ $last ? '' : ', ' }}</span>
+		</div>
+	</div>
+	<div class="row">
+		<label for="place">Pizzeria: </label>
+		<select name="place" ng-options="place.name for place in places.list track by place.id" ng-model="placeIndex"></select>
+		<strong>Adres: </strong><span>{{ places.list[placeIndex.id].address }}</span>
+		<table class="table table-stripped">
+			<thead>
+				<tr>
+					<th>
+						<a href="" ng-click="setOrderByFiled('name')">Pizza</a>
+					</th>
+					<th>
+						<a href="" ng-click="setOrderByFiled(getComponentsLength)">Składniki</a>
+					</th>
+					<th>
+						<a href="" ng-click="setOrderByFiled(getPercentages)">Podobieństwo</a>
+					</th>
+					<th>
+						<a href="" ng-click="setOrderByFiled('price')">Cena</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="pizza in places.list[placeIndex.id].pizza | orderBy: orderByField : reverse" ng-class="getClass(pizza)">
+					<td>{{ pizza.name }}</td>
+					<td>
+						<span 
+							ng-repeat="component in pizza.components" 
+							ng-class="{ mark : pizzaList[index].components.indexOf(component) > -1 }">
+							{{ items.components[component].name }}{{ $last ? '' : ', ' }}</span>
+					</td>
+					<td>{{ getPercentages(pizza) }}%</td>
+					<td>{{ pizza.price | currency }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
