@@ -1,0 +1,38 @@
+{
+	"components": {
+		"1_1": { "name": "Cebula biała" },
+		"1_2": { "name": "Cebula czerwona" },
+		"1_3": { "name": "Fasola" },
+		"1_4": { "name": "Kukurydza" },
+		"1_5": { "name": "Ogórek" },
+		"1_6": { "name": "Papryka" },
+		"1_7": { "name": "Pieczarki" },
+		"2_1": { "name": "Kebab" },
+		"2_2": { "name": "Peperoni" },
+		"2_3": { "name": "Salami" },
+		"2_4": { "name": "Szynka" },
+		"3_1": { "name": "Oscypek" },
+		"3_2": { "name": "Rukola" },
+		"3_3": { "name": "Oliwki" }
+	},
+	"categories": [
+		{
+			"name": "Podstawowe",
+			"max": "",
+			"layer": 1,
+			"items": ["1_1", "1_2", "1_3", "1_4", "1_5", "1_6", "1_7"]
+		},
+		{
+			"name": "Mięso",
+			"max": "",
+			"layer": 2,
+			"items": ["2_1", "2_2", "2_3", "2_4"]
+		},
+		{
+			"name": "Dodatki",
+			"max": "",
+			"layer": 3,
+			"items": ["3_1", "3_2", "3_3"]
+		}
+	]
+}
