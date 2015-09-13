@@ -4,6 +4,6 @@ Mała aplikacja napisana w AngularJS w celu nauki. Całość napisana od podstaw
 # Instalacja
 1. `npm install`
 2. `node server/app.js`
-3. http://localhost:1337
+3. Otwórz w przegldarce adres: http://localhost:1337
 
 nodejs nie jest wymagany, ale wtedy wprowadzone dane przepadną.
