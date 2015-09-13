@@ -11,4 +11,4 @@ nodejs nie jest wymagany, ale wtedy wprowadzone dane przepadną.
 
 # Demo
 
-[demo](http://pizza.marcincichocki.net/) - wersja bez nodejs
+[demo](http://pizza.marcincichocki.net/)
