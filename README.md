@@ -7,3 +7,8 @@ Mała aplikacja napisana w AngularJS w celu nauki. Całość napisana od podstaw
 3. Otwórz w przegldarce adres: http://localhost:1337
 
 nodejs nie jest wymagany, ale wtedy wprowadzone dane przepadną.
+
+
+# Demo
+
+[demo](http://pizza.marcincichocki.net/) - wersja bez nodejs
