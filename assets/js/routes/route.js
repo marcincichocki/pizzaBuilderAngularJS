@@ -28,8 +28,8 @@ angular.module('pizzaBuilder')
 
 			// any other route
 			.otherwise({
-      	redirectTo: '/'
-    	});
+				redirectTo: '/'
+			});
 
 
 
