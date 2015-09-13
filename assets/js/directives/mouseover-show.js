@@ -8,15 +8,15 @@ angular.module('pizzaBuilder')
 	.directive('mouseoverShow', function() {
 		return function(scope, element, attrs) {
 
-      element.parent().on('mouseenter', function() {
+			element.parent().on('mouseenter', function() {
 				element.removeClass('hide');
-      });
+			});
 
-      element.parent().on('mouseleave', function() {
-      	element.addClass('hide');
-      });
+			element.parent().on('mouseleave', function() {
+				element.addClass('hide');
+			});
 
-    };
+		};
 
 	});
 
