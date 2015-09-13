@@ -3,7 +3,7 @@
 
 
 angular.module('pizzaBuilder')
-	
+
 	.service('Components', [function() {
 		
 		// array of selected components(ids)
@@ -17,13 +17,12 @@ angular.module('pizzaBuilder')
 		this.toggleSelection = function(id) {
 			var index = this.selection.indexOf(id);
 
-	    if (index > -1) {
-	      this.selection.splice(index, 1);
-	    } else {
-	      this.selection.push(id);
-	    }
+			if (index > -1) {
+				this.selection.splice(index, 1);
+			} else {
+				this.selection.push(id);
+			}
 
-	    console.log(this.selection);
 		};
 
 		/**
