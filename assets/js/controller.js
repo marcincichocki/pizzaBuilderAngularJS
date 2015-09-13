@@ -319,7 +319,7 @@
 						.post('http://localhost:' + Data.PORT + '/list', pizza)
 						.then(function(response) {
 							$location.path('/');
-							$scope.$parent.pizzaList = response.data;
+							$scope.$parent.pizzaList.push(pizza);
 						});
 				} else {
 					$scope.$parent.pizzaList.push(pizza);
