@@ -23,12 +23,11 @@
 
 
 
-(function() {
 
-	/**
-	 * App main module
-	 */
-	angular.module('pizzaBuilder', ['ngRoute', 'ngAnimate']);
+/**
+ * App main module
+ */
+angular.module('pizzaBuilder', ['ngRoute', 'ngAnimate']);
 
 
-}());
+
