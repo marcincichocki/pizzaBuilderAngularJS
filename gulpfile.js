@@ -34,11 +34,11 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
 	gulp.src([
-			paths.assets + 'js/module.js',
-			paths.assets + 'js/service.js',
-			paths.assets + 'js/directive.js',
-			paths.assets + 'js/route.js',
-			paths.assets + 'js/controller.js'
+			paths.assets + 'js/modules/**/*.js',
+			paths.assets + 'js/services/**/*.js',
+			paths.assets + 'js/directives/**/*.js',
+			paths.assets + 'js/routes/**/*.js',
+			paths.assets + 'js/controllers/**/*.js'
 		])
 		.pipe(concat('app.js'))
 		//.pipe(uglify().on('error', logError))
