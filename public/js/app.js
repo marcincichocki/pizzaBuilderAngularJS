@@ -110,6 +110,8 @@
 		    } else {
 		      this.selection.push(id);
 		    }
+
+		    console.log(this.selection);
 			};
 
 			/**
@@ -543,7 +545,7 @@
 						.post('http://localhost:' + Data.PORT + '/list', pizza)
 						.then(function(response) {
 							$location.path('/');
-							$scope.$parent.pizzaList = response.data;
+							$scope.$parent.pizzaList.push(pizza);
 						});
 				} else {
 					$scope.$parent.pizzaList.push(pizza);
