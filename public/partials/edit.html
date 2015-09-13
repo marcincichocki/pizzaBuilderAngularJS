@@ -25,12 +25,15 @@
 						</li>
 					</ul>
 					<div class="list-group" ng-repeat="category in items.categories" ng-show="tab.isSelected($index)">
-						<a class="list-group-item" href="" 
+						<label class="list-group-item"
 							ng-repeat="component in category.items" 
-							ng-click="componentList.toggleSelection(component)" 
 							ng-class="{ active: componentList.selection.indexOf(component) > -1 }">{{ items.components[component].name }}
-							<input type="checkbox" ng-checked="componentList.selection.indexOf(component) > -1" tabindex="-1">
-						</a>
+							<input 
+								type="checkbox" 
+								ng-click="componentList.toggleSelection(component)" 
+								ng-checked="componentList.selection.indexOf(component) > -1" 
+								tabindex="-1">
+						</label>
 					</div>
 				</div>
 			</div>
