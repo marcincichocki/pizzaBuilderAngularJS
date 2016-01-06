@@ -5,7 +5,7 @@
 				<div class="panel-heading">
 					<div class="row container-fluid">
 						<h3 class="pull-left">Lista pizz</h3>
-						<a class="btn btn-primary brn-lg pull-right" href="/new" ng-click="app.setSelection()">Dodaj nową</a>
+						<a class="btn btn-primary brn-lg pull-right" href="new" ng-click="app.setSelection()">Dodaj nową</a>
 					</div>
 				</div>
 				<div class="panel-body panel-body-fill">
@@ -18,10 +18,10 @@
 								</p>
 							</div>
 							<div class="controllers hide" mouseover-show>
-								<a ng-href="/edit/{{ $index }}" title="Edytuj" ng-click="app.setSelection(pizza.components)">
+								<a ng-href="edit/{{ $index }}" title="Edytuj" ng-click="app.setSelection(pizza.components)">
 									<span class="glyphicon glyphicon-edit"></span>
 								</a>
-								<a ng-href="/results/{{ $index }}" title="Szukaj">
+								<a ng-href="results/{{ $index }}" title="Szukaj">
 									<span class="glyphicon glyphicon-search"></span>
 								</a>
 								<a href="" title="Usuń" ng-click="app.delete($index)">
