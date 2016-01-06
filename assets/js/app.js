@@ -4,7 +4,7 @@
  * To run this app simply go to ./ download dependencies with npm install,
  * then run command: node server/app.js
  *
- * Then go to the browser and open http://localhost:1337 
+ * Then go to the browser and open http://localhost:1337
  * and create your own pizza!
  *
  * It is possible to run it without express server, but it suck then.
@@ -14,9 +14,9 @@
  *
  * This app was created in a week, as a challenge to learn AngularJS framework
  *
- *     ▀▀█▀▀ ▒█░░▒█ ▒█░░░ ▒█░▄▀ ▒█▀▀▀█ 　 ▒█▀▄▀█ ▀█▀ ▒█▀▀█ ▒█░▄▀ ▒█▀▀▀█ 
- *░     ▒█░░ ▒█▄▄▄█ ▒█░░░ ▒█▀▄░ ▒█░░▒█ 　 ▒█▒█▒█ ▒█░ ▒█▄▄▀ ▒█▀▄░ ▒█░░▒█ 
- *░    ▒ █░░ ░░▒█░░ ▒█▄▄█ ▒█░▒█ ▒█▄▄▄█ 　 ▒█░░▒█ ▄█▄ ▒█░▒█ ▒█░▒█ ▒█▄▄▄█ 
+ *     ▀▀█▀▀ ▒█░░▒█ ▒█░░░ ▒█░▄▀ ▒█▀▀▀█ 　 ▒█▀▄▀█ ▀█▀ ▒█▀▀█ ▒█░▄▀ ▒█▀▀▀█
+ *░     ▒█░░ ▒█▄▄▄█ ▒█░░░ ▒█▀▄░ ▒█░░▒█ 　 ▒█▒█▒█ ▒█░ ▒█▄▄▀ ▒█▀▄░ ▒█░░▒█
+ *░    ▒ █░░ ░░▒█░░ ▒█▄▄█ ▒█░▒█ ▒█▄▄▄█ 　 ▒█░░▒█ ▄█▄ ▒█░▒█ ▒█░▒█ ▒█▄▄▄█
  *
  */
 
@@ -39,7 +39,7 @@ angular.module('pizzaBuilder', ['ngRoute', 'ngAnimate']);
 angular.module('pizzaBuilder')
 
 	.service('Components', [function() {
-		
+
 		// array of selected components(ids)
 		this.selection = [];
 
@@ -108,7 +108,7 @@ angular.module('pizzaBuilder')
 angular.module('pizzaBuilder')
 
 	.service('Data', ['$http', function($http) {
-	
+
 		// express server port
 		this.PORT = 1337;
 
@@ -187,16 +187,16 @@ angular.module('pizzaBuilder')
 		$routeProvider
 
 			// /
-			.when('/', { templateUrl: '../partials/root.html' })
+			.when('/', { templateUrl: 'assets/partials/root.html' })
 
 			// /new
-			.when('/new', { templateUrl: '../partials/edit.html', controller: 'NewController' })
+			.when('/new', { templateUrl: 'assets/partials/edit.html', controller: 'NewController' })
 
 			// /edit
-			.when('/edit/:id', { templateUrl: '../partials/edit.html', controller: 'EditController' })
+			.when('/edit/:id', { templateUrl: 'assets/partials/edit.html', controller: 'EditController' })
 
 			// /results
-			.when('/results/:id', { templateUrl: '../partials/results.html', controller: 'ResultsController' })
+			.when('/results/:id', { templateUrl: 'assets/partials/results.html', controller: 'ResultsController' })
 
 
 			// any other route
@@ -229,7 +229,7 @@ angular.module('pizzaBuilder')
 
 		/**
 		 * App will use this set of data ONLY if express server is down.
-		 * Please note that data will come back to initial state with 
+		 * Please note that data will come back to initial state with
 		 * every page refresh, so please set up your express server ( ͡° ͜ʖ ͡°)
 		 */
 		var backup = [
@@ -238,14 +238,14 @@ angular.module('pizzaBuilder')
 		];
 
 		/**
-		 * list of $scope variables: 
-		 * 
+		 * list of $scope variables:
+		 *
 		 * 	pizzaList
 		 * 	useExpress
 		 * 	items
 		 * 	places
 		 */
-		
+
 		// store array of pizza objects
 		$scope.pizzaList = null;
 		$scope.useExpress = null;
@@ -254,7 +254,7 @@ angular.module('pizzaBuilder')
 
 		// info about components
 		Data
-			.get('../data/items.json')
+			.get('assets/data/items.json')
 			.then(function(response) {
 				$scope.items = response.data;
 			}, function(response) {
@@ -263,7 +263,7 @@ angular.module('pizzaBuilder')
 
 		// info about places
 		Data
-			.get('../data/places.json')
+			.get('assets/data/places.json')
 			.then(function(response) {
 				$scope.places = response.data;
 			}, function(response) {
@@ -313,9 +313,9 @@ angular.module('pizzaBuilder')
 
 
 		/**
-		 * Control which components will be visible within .components 
+		 * Control which components will be visible within .components
 		 * for gven pizza index
-		 * 
+		 *
 		 * @param {Number} index index of a $scope.pizzaList array
 		 */
 		this.showPizza = function(index) {
@@ -338,7 +338,7 @@ angular.module('pizzaBuilder')
 	 * component list contorller(selecting etc);
 	 */
 	.controller('ComponentListController', ['Components', function(Components) {
-	
+
 		this.toggleSelection = Components.toggleSelection;
 		this.howMany = Components.howMany;
 		this.selection = Components.getSelection();
@@ -375,7 +375,7 @@ angular.module('pizzaBuilder')
 		 */
 		$scope.save = function(name, index) {
 			var pizza = {
-				name: name, 
+				name: name,
 				components: Components.getSelection()
 			};
 
@@ -410,14 +410,14 @@ angular.module('pizzaBuilder')
 	 * main contorller of /new route
 	 */
 	.controller('NewController', ['$scope', '$location', 'Components', 'Data', function($scope, $location, Components, Data) {
-		
+
 
 		// some data to fill inputs in view
 		$scope.title = 'Dodaj';
 
 		/**
 		 * Add new pizza to pizzaList
-		 * 
+		 *
 		 * @param {String} name name of pizza
 		 */
 		$scope.save = function(name) {
@@ -512,7 +512,7 @@ angular.module('pizzaBuilder')
 		 * @return {Number}       length of given pizza.comopnents array
 		 */
 		$scope.getComponentsLength = function(pizza) {
-			return pizza.components.length;				
+			return pizza.components.length;
 		};
 
 
@@ -522,7 +522,7 @@ angular.module('pizzaBuilder')
 		 * @return {String}       name of class
 		 */
 		$scope.getClass = function(pizza) {
-			
+
 			var className = '';
 
 			for (var i = 110; i -= 10; ) {
