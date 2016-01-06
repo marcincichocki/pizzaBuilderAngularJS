@@ -11,4 +11,4 @@ nodejs nie jest wymagany, ale wtedy wprowadzone dane przepadną.
 
 # Demo
 
-[demo](http://pizza.marcincichocki.net/)
+[demo](http://marcincichocki.github.io/pizzaBuilderAngularJS)
