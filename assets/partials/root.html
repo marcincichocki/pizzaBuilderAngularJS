@@ -7,7 +7,7 @@
 						<h3 class="pull-left">Lista pizz</h3>
 						<a class="btn btn-primary brn-lg pull-right" href="/new" ng-click="app.setSelection()">Dodaj nową</a>
 					</div>
-				</div>			
+				</div>
 				<div class="panel-body panel-body-fill">
 					<ul class="list-group">
 						<li class="list-group-item" ng-repeat="pizza in pizzaList" ng-mouseover="app.showPizza($index)">
@@ -35,12 +35,12 @@
 		</div>
 		<div class="col-md-8">
 			<div class="container components">
-				<img src="img/pusta_pizza.png">
+				<img src="assets/img/pusta_pizza.png">
 				<div class="layer{{ $index + 1 }}" ng-repeat="category in items.categories">
-					<img class="component" 
-						ng-repeat="component in category.items" 
-						ng-show="pizzaList[app.showIndex].components.indexOf(component) > -1" 
-						ng-src="img/{{ component }}.png">
+					<img class="component"
+						ng-repeat="component in category.items"
+						ng-show="pizzaList[app.showIndex].components.indexOf(component) > -1"
+						ng-src="assets/img/{{ component }}.png">
 				</div>
 			</div>
 		</div>

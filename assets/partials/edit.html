@@ -7,7 +7,7 @@
 						<h3>{{ title }}</h3>
 						<form ng-submit="save(pizza.name, pizza.index)">
 							<div class="input-group">
-								<input type="text"  placeholder="Nazwa pizzy" class="form-control" ng-model="pizza.name">	
+								<input type="text"  placeholder="Nazwa pizzy" class="form-control" ng-model="pizza.name">
 					      <span class="input-group-btn">
 									<input type="submit" class="btn btn-default" value="Zapisz" ng-disabled="(!pizza.name || !componentList.selection.length)">
 					      </span>
@@ -26,12 +26,12 @@
 					</ul>
 					<div class="list-group" ng-repeat="category in items.categories" ng-show="tab.isSelected($index)">
 						<label class="list-group-item"
-							ng-repeat="component in category.items" 
+							ng-repeat="component in category.items"
 							ng-class="{ active: componentList.selection.indexOf(component) > -1 }">{{ items.components[component].name }}
-							<input 
-								type="checkbox" 
-								ng-click="componentList.toggleSelection(component)" 
-								ng-checked="componentList.selection.indexOf(component) > -1" 
+							<input
+								type="checkbox"
+								ng-click="componentList.toggleSelection(component)"
+								ng-checked="componentList.selection.indexOf(component) > -1"
 								tabindex="-1">
 						</label>
 					</div>
@@ -40,12 +40,12 @@
 		</div>
 		<div class="col-md-8">
 			<div class="container components">
-				<img src="img/pusta_pizza.png">
+				<img src="assets/img/pusta_pizza.png">
 				<div class="layer{{ $index + 1 }}" ng-repeat="category in items.categories">
-					<img class="component" 
-						ng-repeat="component in category.items" 
-						ng-show="componentList.selection.indexOf(component) > -1" 
-						ng-src="{{ 'img/' + component + '.png' }}">
+					<img class="component"
+						ng-repeat="component in category.items"
+						ng-show="componentList.selection.indexOf(component) > -1"
+						ng-src="assets/img/{{ component }}.png">
 				</div>
 			</div>
 		</div>
